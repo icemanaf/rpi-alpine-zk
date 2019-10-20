@@ -3,8 +3,8 @@ FROM alpine:3.7 AS builder
 #add required packages
 RUN  apk add --no-cache   tar  wget bash
 
-#current zookeeper version
-ARG ZK_VERSION=3.5.5
+#current zookeeper version - update the version if wget complains while building the image
+ARG ZK_VERSION=3.5.6
 
 #get zookeeper
 RUN wget -O zk.tar.gz -q http://mirror.ox.ac.uk/sites/rsync.apache.org/zookeeper/stable/apache-zookeeper-${ZK_VERSION}.tar.gz 
