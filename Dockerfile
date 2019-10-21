@@ -9,7 +9,7 @@ ARG ZK_VERSION=3.5.6
 #get zookeeper
 RUN wget -O zk.tar.gz -q http://archive.apache.org/dist/zookeeper/zookeeper-${ZK_VERSION}/apache-zookeeper-${ZK_VERSION}-bin.tar.gz
 
-RUN tar -xzvf zk.tar.gz && mv apache-zookeeper-${ZK_VERSION} /zk && \
+RUN tar -xzvf zk.tar.gz && mv apache-zookeeper-${ZK_VERSION}-bin /zk && \
 mkdir /zk/data && \
 rm -rf zk.tar.gz && \
 apk del wget tar
