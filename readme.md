@@ -16,7 +16,7 @@ These will contain the setup and configuration data and the running container wi
 Run the image:
 
 ```
-	run sudo docker run -it --restart always -p 2181:2181 -p 2888:2888 -p 3888:3888 -v ~/zk/data:/zk/data -v ~/zk/conf:/zk/conf icemanaf/rpi-alpine-zk
+	docker run -it --restart always -p 2181:2181 -p 2888:2888 -p 3888:3888 -v ~/zk/data:/zk/data -v ~/zk/conf:/zk/conf icemanaf/rpi-alpine-zk
 ```
 Put the myid file in the data folder. This is essential in a multi broker zookeeper ensemble.
 
