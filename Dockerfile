@@ -32,6 +32,8 @@ ARG DATA_DIR=/zk/data
 #configurations
 RUN sed "s~dataDir=/tmp/zookeeper~dataDir=${DATA_DIR}~g" /zk/conf/zoo_sample.cfg >/zk/conf/zoo.cfg
 
+RUN echo  "4lw.commands.whitelist=*" > zk/conf/zoo.cfg
+
 ENV PATH=$PATH:/zk/bin
 
 EXPOSE 2181 2888 3888
