@@ -27,8 +27,8 @@ WORKDIR zk
 
 COPY --from=builder /zk .
 
-ARG DATA_DIR=/zk/data
-ARG MY_ID=1
+ENV DATA_DIR=/zk/data
+ENV MY_ID=1
 
 #configurations
 RUN sed "s~dataDir=/tmp/zookeeper~dataDir=${DATA_DIR}~g" /zk/conf/zoo_sample.cfg >/zk/conf/zoo.cfg
